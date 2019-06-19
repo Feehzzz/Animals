@@ -39,7 +39,7 @@ export default class ToolTip {
     currentTarget.addEventListener('mousemove', this.onMouseMove);
     currentTarget.addEventListener('mouseleave', this.onMouseLeave);
   }
-  // adiciona os eventos de mouseove a cada tooltip
+  // adiciona os eventos de mouseove a cada tool
   addTooltipsEvent() {
     this.tooltips.forEach((item) => {
       item.addEventListener('mouseover', this.onMouseOver);
