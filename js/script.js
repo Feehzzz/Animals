@@ -3,12 +3,13 @@ import Accordion from './accordion.js';
 import TabNav from './tabnav.js';
 import Modal from './modal.js';
 import ToolTip from './tooltip.js';
-import initDropDownMenu from './dropdown.js';
+import DropDownMenu from './dropdown.js';
 import initMenuMobile from './menu-mobile.js';
 import initFuncionamento from './funcionamento.js';
 import fetchAnimais from './fetch-animais.js';
 import fetchBitcoin from './fetch-bitcoin.js';
 import ScrollAnima from './scroll-anima.js';
+
 
 const options = {
   behavior: 'smooth',
@@ -36,7 +37,10 @@ fetchAnimais('./animaisapi.json', '.numeros-grid');
 const scrollAnima = new ScrollAnima('[data-anime="scroll"]');
 scrollAnima.init();
 
-initDropDownMenu();
+const dropdown = new DropDownMenu('[data-dropdown]')
+dropdown.init()
+
+
 initMenuMobile();
 initFuncionamento();
 
