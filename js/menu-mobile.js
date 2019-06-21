@@ -14,7 +14,7 @@ export default class MenuMobile {
     this.activeClass = 'ativo'
     this.openMenu = this.openMenu.bind(this)
   }
-
+ // adiciona a classe ativo ao botão do menu mobile
   openMenu() {
     this.menuList.classList.add(this.activeClass);
     this.menuButton.classList.add(this.activeClass);
@@ -23,6 +23,7 @@ export default class MenuMobile {
       this.menuButton.classList.remove(this.activeClass);
     })
   }
+  // adiciona o evento aos elementos do menu mobile
   addEventMobile(){
     this.events.forEach(evento => {
       this.menuButton.addEventListener(evento, this.openMenu);
