@@ -8,7 +8,7 @@ import initMenuMobile from './menu-mobile.js';
 import initFuncionamento from './funcionamento.js';
 import fetchAnimais from './fetch-animais.js';
 import fetchBitcoin from './fetch-bitcoin.js';
-import initAnimacaoScroll from './scroll-animacao.js';
+import ScrollAnima from './scroll-anima.js';
 
 const options = {
   behavior: 'smooth',
@@ -30,10 +30,14 @@ const tooltip = new ToolTip('[data-tooltip]');
 tooltip.init();
 
 fetchBitcoin('https://blockchain.info/ticker', '.btc-preco');
- 
+fetchAnimais('./animaisapi.json', '.numeros-grid');
+
+
+const scrollAnima = new ScrollAnima('[data-anime="scroll"]');
+scrollAnima.init();
+
 initDropDownMenu();
 initMenuMobile();
 initFuncionamento();
-initAnimacaoScroll();
 
-fetchAnimais('./animaisapi.json', '.numeros-grid');
+
