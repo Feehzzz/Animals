@@ -26,11 +26,11 @@ export default function fetchAnimais(url, target) {
 
   async function criarAnimais() {
     try {
-      // fetch espera a resposta e transoforma em json
+      // fetch espera a resposta e transformação em json
       const animaisResponse = await fetch(url);
       const animaisJSON = await animaisResponse.json();
 
-      // após transoforção de json, ativa as funções 
+      // após transformação de json, ativa as funções 
       // para preencher e animar os números
       animaisJSON.forEach(animal => preencheAnimais(animal));
       animaAnimaisNumeros();
