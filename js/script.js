@@ -5,7 +5,7 @@ import Modal from './modal.js';
 import ToolTip from './tooltip.js';
 import DropDownMenu from './dropdown.js';
 import MenuMobile from './menu-mobile.js';
-import initFuncionamento from './funcionamento.js';
+import Funcionamento from './funcionamento.js';
 import fetchAnimais from './fetch-animais.js';
 import fetchBitcoin from './fetch-bitcoin.js';
 import ScrollAnima from './scroll-anima.js';
@@ -43,6 +43,7 @@ dropdown.init()
 const menuMobile = new MenuMobile('[data-menu="button"]','[data-menu="list"]' )
 menuMobile.init();
 
-initFuncionamento();
+const funcionamento = new Funcionamento('[data-semana]');
+funcionamento.init();
 
 
