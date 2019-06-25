@@ -9,6 +9,8 @@ import Funcionamento from './funcionamento.js';
 import fetchAnimais from './fetch-animais.js';
 import fetchBitcoin from './fetch-bitcoin.js';
 import ScrollAnima from './scroll-anima.js';
+import SlideNav from './slide.js';
+
 
 
 const options = {
@@ -46,4 +48,6 @@ menuMobile.init();
 const funcionamento = new Funcionamento('[data-semana]');
 funcionamento.init();
 
-
+const slide = new SlideNav('.slide', '.slide-wrapper');
+slide.init();
+slide.addControl('.custom-controls')
