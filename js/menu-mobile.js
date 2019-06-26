@@ -15,7 +15,8 @@ export default class MenuMobile {
     this.openMenu = this.openMenu.bind(this)
   }
  // adiciona a classe ativo ao botão do menu mobile
-  openMenu() {
+  openMenu(e) {
+    e.preventDefault();
     this.menuList.classList.add(this.activeClass);
     this.menuButton.classList.add(this.activeClass);
     outSideClick(this.menuList, this.events, () => {
